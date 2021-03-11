@@ -11,11 +11,12 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/newrelicexporter v0.21.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sapmexporter v0.21.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter v0.21.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/awscontainerinsightprocessor v0.0.0-00010101000000-000000000000
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor v0.21.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver v0.0.0-00010101000000-000000000000
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsecscontainermetricsreceiver v0.21.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsxrayreceiver v0.21.0
-	github.com/opencontainers/runc v1.0.0-rc92
+	github.com/opencontainers/runc v1.0.0-rc93
 	github.com/pkg/errors v0.9.1
 	github.com/spf13/cobra v1.1.3
 	github.com/spf13/viper v1.7.1
@@ -40,7 +41,8 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/pkg/experiment
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver => ../opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver/
 
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/awscontainerinsightprocessor => ../opentelemetry-collector-contrib/processor/awscontainerinsightprocessor/
+
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter => ../opentelemetry-collector-contrib/exporter/awsemfexporter
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/internal/aws => ../opentelemetry-collector-contrib/internal/aws
-

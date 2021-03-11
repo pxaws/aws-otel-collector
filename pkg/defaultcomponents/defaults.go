@@ -24,6 +24,7 @@ import (
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/newrelicexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sapmexporter"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/signalfxexporter"
+	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/awscontainerinsightprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awscontainerinsightreceiver"
 	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/awsecscontainermetricsreceiver"
@@ -63,6 +64,7 @@ func Components() (component.Factories, error) {
 	// enable the selected processors
 	processors := []component.ProcessorFactory{
 		metricstransformprocessor.NewFactory(),
+		awscontainerinsightprocessor.NewFactory(),
 	}
 	for _, pr := range factories.Processors {
 		processors = append(processors, pr)
